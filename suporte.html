@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suporte — Raiz Café</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <div class="header__logo-mark">R</div>
+        <div>
+          <span class="header__logo-text">Raiz Café</span>
+          <span class="header__logo-sub">Um blend de afeto</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="catalogo.html" class="nav__link">Catálogo</a></li>
+          <li><a href="suporte.html" class="nav__link active">Suporte</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button class="cart-btn" onclick="RAIZ_CART.openDrawer()" title="Carrinho">
+          🛒 <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="suporte-hero">
+    <div class="container">
+      <span class="section__eyebrow">Estamos aqui para você</span>
+      <h1 class="section__title" style="color:var(--rosa)">Suporte & Ajuda</h1>
+      <p>Tire suas dúvidas, fale com a gente ou consulte nosso FAQ</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <!-- CANAIS -->
+      <div class="canais">
+        <div class="canal">
+          <div class="canal__icon">📧</div>
+          <div class="canal__title">E-mail</div>
+          <div class="canal__info">oi@raizcafe.com.br<br>Respondemos em até 24h</div>
+        </div>
+        <div class="canal">
+          <div class="canal__icon">💬</div>
+          <div class="canal__title">WhatsApp</div>
+          <div class="canal__info">(31) 99999-0000<br>Seg–Sex, 9h às 18h</div>
+        </div>
+        <div class="canal">
+          <div class="canal__icon">📦</div>
+          <div class="canal__title">Rastreio</div>
+          <div class="canal__info">Acompanhe seu pedido<br>pelo código dos Correios</div>
+        </div>
+      </div>
+
+      <div class="suporte__grid">
+        <!-- FORMULÁRIO -->
+        <div>
+          <h2 class="suporte-form__title">Fale com a gente</h2>
+          <form onsubmit="submitForm(event)">
+            <div class="form-group">
+              <label class="form-label">Nome completo</label>
+              <input type="text" class="form-input" placeholder="Seu nome" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">E-mail</label>
+              <input type="email" class="form-input" placeholder="seu@email.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Celular</label>
+              <input type="tel" class="form-input" placeholder="(00) 00000-0000">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Assunto</label>
+              <select class="form-select">
+                <option>Dúvida sobre pedido</option>
+                <option>Troca ou devolução</option>
+                <option>Problema com produto</option>
+                <option>Informações sobre os cafés</option>
+                <option>Outros</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Mensagem</label>
+              <textarea class="form-textarea" placeholder="Descreva sua dúvida ou problema..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary" style="width:100%">Enviar mensagem →</button>
+          </form>
+        </div>
+
+        <!-- FAQ -->
+        <div>
+          <h2 class="faq__title">Perguntas frequentes</h2>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Qual o prazo de entrega? <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              O prazo varia de 3 a 8 dias úteis dependendo da sua região. Após a confirmação do pagamento, seu pedido é preparado e enviado em até 1 dia útil. Você receberá o código de rastreio por e-mail.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Como é feita a torra do café? <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Torramos em pequenos lotes semanais de forma artesanal. Cada lote é monitorado manualmente para garantir o perfil de torra ideal de cada variedade. O café que você recebe foi torrado há no máximo 7 dias.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Posso trocar ou devolver? <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Sim! Trocas espontâneas podem ser solicitadas em até 7 dias após o recebimento. Para trocas por defeito ou problema de qualidade, entre em contato conosco em até 30 dias. O frete de retorno é por nossa conta nesses casos.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Os cafés são certificados? <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Nossa linha Colheita Natural possui certificação orgânica pelo IBD. Todos os nossos cafés são rastreáveis — você pode consultar a origem de cada lote pelo código no pacote. Trabalhamos com comércio justo e pagamos acima do preço de mercado aos produtores.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Vocês fazem assinatura de café? <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Em breve! Estamos preparando um programa de assinatura mensal com desconto especial, seleção exclusiva de lotes e frete grátis. Cadastre-se na nossa newsletter para ser avisado no lançamento.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Como armazenar o café depois de aberto? <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Feche bem a embalagem após cada uso, utilizando o zip-lock ou lacre. Guarde em local fresco, seco e longe da luz solar direta. Evite geladeira ou freezer — a variação de temperatura e umidade prejudica o aroma. Consuma em até 30 dias após aberto.
+            </div>
+          </div>
+
+          <!-- POLÍTICA DE TROCAS -->
+          <div style="margin-top:36px; padding:28px; background:var(--rosa-medio); border-radius:var(--radius); border:1px solid var(--rosa-borda);">
+            <h3 style="font-family:'Cormorant Garamond',serif; font-size:20px; color:var(--marrom-esc); margin-bottom:16px;">
+              📋 Política de Trocas e Devoluções
+            </h3>
+            <p style="font-size:13px; color:var(--texto-suave); line-height:1.9; margin-bottom:12px;">
+              <strong>Troca espontânea:</strong> Solicitação em até 7 dias após recebimento. Produto deve estar lacrado e em condições originais. Frete de retorno por conta do cliente.
+            </p>
+            <p style="font-size:13px; color:var(--texto-suave); line-height:1.9; margin-bottom:12px;">
+              <strong>Troca por defeito:</strong> Solicitação em até 30 dias. Envie foto do produto com o problema pelo formulário acima. Frete de retorno por nossa conta.
+            </p>
+            <p style="font-size:13px; color:var(--texto-suave); line-height:1.9;">
+              <strong>Devolução:</strong> Reembolso integral em até 5 dias úteis após confirmação do retorno do produto. Processado via Pix ou estorno no cartão.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <div>
+          <div class="footer__brand-name">Raiz Café</div>
+          <span class="footer__brand-tag">Um blend de afeto</span>
+          <p class="footer__brand-desc">Café artesanal de Olavo e Maria, família mineira apaixonada pelo café.</p>
+        </div>
+        <div>
+          <span class="footer__col-title">Navegação</span>
+          <div class="footer__col-links">
+            <a href="index.html">Home</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="suporte.html">Suporte</a>
+          </div>
+        </div>
+        <div>
+          <span class="footer__col-title">Produtos</span>
+          <div class="footer__col-links">
+            <a href="catalogo.html">Cafés em grão</a>
+            <a href="catalogo.html">Utensílios</a>
+            <a href="catalogo.html">Kits presente</a>
+          </div>
+        </div>
+        <div>
+          <span class="footer__col-title">Contato</span>
+          <div class="footer__col-links">
+            <a href="mailto:oi@raizcafe.com.br">oi@raizcafe.com.br</a>
+            <a href="#">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">© 2024 Raiz Café · Todos os direitos reservados</div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer__header">
+      <span class="cart-drawer__title">Seu carrinho 🛒</span>
+      <button class="cart-close" onclick="RAIZ_CART.closeDrawer()">×</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty" id="cart-empty">
+        <div class="cart-empty__icon">☕</div>
+        <p>Seu carrinho está vazio.<br>Que tal um cafezinho?</p>
+      </div>
+    </div>
+    <div class="cart-drawer__footer">
+      <div class="cart-total">
+        <span class="cart-total__label">Total</span>
+        <span class="cart-total__valor" id="cart-total">R$ 0,00</span>
+      </div>
+      <button class="btn btn--primary" id="cart-checkout" style="width:100%" onclick="RAIZ_CART.checkout()" disabled>
+        Finalizar pedido →
+      </button>
+      <p class="cart-note">🔒 Pagamento seguro · Entrega para todo Brasil</p>
+    </div>
+  </div>
+
+  <script src="cart.js"></script>
+  <script>
+    function submitForm(e) {
+      e.preventDefault();
+      // TODO: integrar com API de contato/suporte
+      alert('Mensagem enviada! Responderemos em até 24h. ☕');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>

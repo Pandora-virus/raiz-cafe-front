@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raiz Café — Um Blend de Afeto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="assets/logo.svg" alt="Raiz Café" class="header__logo-img" style="width:42px;height:42px;border-radius:50%;">
+        <div>
+          <span class="header__logo-text">Raiz Café</span>
+          <span class="header__logo-sub">Um blend de afeto</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link active">Home</a></li>
+          <li><a href="catalogo.html" class="nav__link">Catálogo</a></li>
+          <li><a href="suporte.html" class="nav__link">Suporte</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="catalogo.html" class="btn btn--primary btn--sm">Ver produtos</a>
+        <button class="cart-btn" onclick="RAIZ_CART.openDrawer()" title="Carrinho">
+          🛒 <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="hero__eyebrow">Agricultura Familiar · Desde 2018</span>
+        <h1 class="hero__title">
+          <em>O café que</em>
+          <strong>tem raízes</strong>
+        </h1>
+        <p class="hero__tagline">Do coração das montanhas de Minas para a sua xícara.</p>
+        <p class="hero__desc">Cada grão do Raiz Café nasce do trabalho, da tradição e do cuidado de famílias que dedicam suas vidas ao cultivo do café. Histórias reais, colheitas cuidadosas e o sabor autêntico de quem faz do café um legado.</p>
+        <div class="hero__actions">
+          <a href="catalogo.html" class="btn btn--primary">Explorar catálogo</a>
+          <a href="#historia" class="btn btn--outline">Nossa história</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__coffee-ring">
+          <img src="assets/hero-decorativo.svg" alt="Raiz Café" class="hero__coffee-img">
+          <div class="hero__badge">
+            <strong>6+</strong>
+            produtos artesanais<br>direto do produtor
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="diferenciais">
+    <div class="container">
+      <div class="diferenciais__grid">
+        <div class="diferencial">
+          <span class="diferencial__icon">🌱</span>
+          <h3 class="diferencial__title">Direto do produtor</h3>
+          <p class="diferencial__desc">Inspirado nas tradições cafeeiras de Minas Gerais, o Raiz Café valoriza produtores que cultivam cada grão com dedicação, respeito à terra e amor pelo que fazem.</p>
+        </div>
+        <div class="diferencial">
+          <span class="diferencial__icon">☕</span>
+          <h3 class="diferencial__title">Torrado na hora</h3>
+          <p class="diferencial__desc">Torrefação artesanal em pequenos lotes para preservar a essência de cada origem. Seu café chega fresco, equilibrado e repleto de aromas e sabores.</p>
+        </div>
+        <div class="diferencial">
+          <span class="diferencial__icon">📦</span>
+          <h3 class="diferencial__title">Entrega em todo Brasil</h3>
+          <p class="diferencial__desc">Embalagens especiais com válvula desgasificadora preservam o frescor e a qualidade do café até o momento do preparo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="historia">
+    <div class="container historia__inner">
+      <div class="historia__img-wrap">
+        <div class="historia__img-placeholder" style="font-size:80px;">👩‍🌾</div>
+        <blockquote class="historia__quote">
+          "O melhor café não nasce apenas da terra. Nasce das mãos, das histórias e da dedicação de quem transforma o cultivo em legado."
+          <cite>— Olavo e Maria, fundadores do Raiz Café</cite>
+        </blockquote>
+      </div>
+      <div class="historia__content">
+        <span class="section__eyebrow">Nossa história</span>
+        <h2 class="section__title">Uma história cultivada com <em>tradição</em></h2>
+        <p class="historia__text">O Raiz Café nasceu do encontro entre a tradição e o cuidado. Inspirado pelas famílias que fazem do café um modo de vida, levamos até você grãos selecionados que carregam a essência das montanhas de Minas Gerais.
+
+Cada safra representa anos de aprendizado, respeito à terra e dedicação em cada etapa do cultivo. Mais do que oferecer um café especial, queremos compartilhar histórias, preservar valores e celebrar a riqueza da cultura cafeeira brasileira.
+
+Em cada xícara, existe um convite: desacelerar, apreciar os pequenos momentos e sentir o verdadeiro sabor das nossas raízes.</p>
+        <p class="historia__text">Olavo representa as tradições cafeeiras de Minas Gerais. Seu conhecimento, construído ao longo de gerações, reflete o respeito pela terra e o compromisso com a qualidade presente em cada colheita.
+        <p class="historia__text">Maria simboliza o cuidado e a hospitalidade mineira. Seu olhar atento aos detalhes e sua paixão pelo café transformam cada experiência em um momento acolhedor e inesquecível.</p>
+        </p>
+        <div class="historia__selo">☕ Tradição Mineira · 🌿 Respeito à Terra · 🤎 Cuidado em Cada Detalhe</div>
+        <a href="catalogo.html" class="btn btn--primary" style="margin-top:24px;">Conhecer produtos</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section__header" style="text-align:center">
+        <span class="section__eyebrow">Destaques da semana</span>
+        <h2 class="section__title">Os favoritos da casa</h2>
+      </div>
+      <div class="produtos__grid">
+        <div class="produto-card">
+          <div class="produto-card__img-wrap">
+            <img src="assets/cafe-reserva-familia.svg" alt="Reserva da Família" class="produto-card__img">
+            <span class="produto-card__badge badge--gourmet">Gourmet</span>
+          </div>
+          <div class="produto-card__body">
+            <div class="produto-card__categoria">Café em grãos · 250g</div>
+            <h3 class="produto-card__nome">Reserva da Família</h3>
+            <p class="produto-card__desc">Notas de chocolate, caramelo e amêndoa. Torra média, acidez suave.</p>
+            <div class="produto-card__footer">
+              <div class="produto-card__preco"><span>R$</span>32,90</div>
+              <button class="btn btn--primary btn--sm" onclick="RAIZ_CART.add({id:'cafe-reserva',nome:'Reserva da Família',preco:32.90,emoji:'☕'})">+ Carrinho</button>
+            </div>
+          </div>
+        </div>
+        <div class="produto-card">
+          <div class="produto-card__img-wrap">
+            <img src="assets/bule-ceramica.svg" alt="Bule de Cerâmica" class="produto-card__img">
+            <span class="produto-card__badge badge--novo">Novo</span>
+          </div>
+          <div class="produto-card__body">
+            <div class="produto-card__categoria">Utensílios · Cerâmica</div>
+            <h3 class="produto-card__nome">Bule de Cerâmica Raiz</h3>
+            <p class="produto-card__desc">Artesanal, 600ml. Feito à mão por artesãs de Minas Gerais.</p>
+            <div class="produto-card__footer">
+              <div class="produto-card__preco"><span>R$</span>89,90</div>
+              <button class="btn btn--primary btn--sm" onclick="RAIZ_CART.add({id:'bule-ceramica',nome:'Bule de Cerâmica Raiz',preco:89.90,emoji:'🫖'})">+ Carrinho</button>
+            </div>
+          </div>
+        </div>
+        <div class="produto-card">
+          <div class="produto-card__img-wrap">
+            <img src="assets/cafe-vale-douro.svg" alt="Vale D'ouro Especial" class="produto-card__img">
+            <span class="produto-card__badge badge--especial">Especial</span>
+          </div>
+          <div class="produto-card__body">
+            <div class="produto-card__categoria">Café moído · 250g</div>
+            <h3 class="produto-card__nome">Vale D'ouro Especial</h3>
+            <p class="produto-card__desc">Processo natural. Notas frutadas de cereja e jasmim, corpo sedoso.</p>
+            <div class="produto-card__footer">
+              <div class="produto-card__preco"><span>R$</span>38,90</div>
+              <button class="btn btn--primary btn--sm" onclick="RAIZ_CART.add({id:'vale-douro',nome:'Vale D\'ouro Especial',preco:38.90,emoji:'🌿'})">+ Carrinho</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:40px">
+        <a href="catalogo.html" class="btn btn--outline">Ver todos os produtos →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="depoimentos">
+    <div class="container">
+      <span class="section__eyebrow">O que dizem nossos clientes</span>
+      <h2 class="section__title" style="color:var(--rosa);margin-bottom:40px">Histórias de quem aprecia</h2>
+      <div class="depoimentos__grid">
+        <div class="depoimento">
+          <div class="depoimento__estrelas">⭐⭐⭐⭐⭐</div>
+          <p class="depoimento__texto">"O Reserva da Família me lembrou o café da minha avó. Aquele cheiro, aquele sabor... é como uma viagem no tempo em cada xícara."</p>
+          <div class="depoimento__autor">
+            <div class="depoimento__avatar">👩</div>
+            <div><div class="depoimento__nome">Ana Clara S.</div><div class="depoimento__local">São Paulo, SP</div></div>
+          </div>
+        </div>
+        <div class="depoimento">
+          <div class="depoimento__estrelas">⭐⭐⭐⭐⭐</div>
+          <p class="depoimento__texto">"Compro todo mês. O Vale D'ouro é simplesmente incrível. Nunca pensei que café especial pudesse ser tão acessível e gostoso."</p>
+          <div class="depoimento__autor">
+            <div class="depoimento__avatar">👨</div>
+            <div><div class="depoimento__nome">Rafael M.</div><div class="depoimento__local">Belo Horizonte, MG</div></div>
+          </div>
+        </div>
+        <div class="depoimento">
+          <div class="depoimento__estrelas">⭐⭐⭐⭐⭐</div>
+          <p class="depoimento__texto">"O bule de cerâmica é uma obra de arte. Combina lindo com a minha cozinha e mantém o café quente por muito tempo. Recomendo!"</p>
+          <div class="depoimento__autor">
+            <div class="depoimento__avatar">👩</div>
+            <div><div class="depoimento__nome">Juliana T.</div><div class="depoimento__local">Curitiba, PR</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <div>
+          <div class="footer__brand-name">Raiz Café</div>
+          <span class="footer__brand-tag">Um blend de afeto</span>
+          <p class="footer__brand-desc">Café artesanal cultivado por Olavo e Maria, uma família mineira que transforma amor pela terra e dedicação em cafés de qualidade para acompanhar os seus melhores momentos.</p>
+        </div>
+        <div>
+          <span class="footer__col-title">Navegação</span>
+          <div class="footer__col-links">
+            <a href="index.html">Home</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="suporte.html">Suporte</a>
+          </div>
+        </div>
+        <div>
+          <span class="footer__col-title">Produtos</span>
+          <div class="footer__col-links">
+            <a href="catalogo.html">Cafés em grão</a>
+            <a href="catalogo.html">Cafés moídos</a>
+            <a href="catalogo.html">Utensílios</a>
+            <a href="catalogo.html">Kits presente</a>
+          </div>
+        </div>
+        <div>
+          <span class="footer__col-title">Contato</span>
+          <div class="footer__col-links">
+            <a href="suporte.html">Fale conosco</a>
+            <a href="suporte.html">Trocas e devoluções</a>
+            <a href="suporte.html">FAQ</a>
+            <a href="mailto:oi@raizcafe.com.br">oi@raizcafe.com.br</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">© 2024 Raiz Café · Agricultura Familiar · Todos os direitos reservados</div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer__header">
+      <span class="cart-drawer__title">Seu carrinho 🛒</span>
+      <button class="cart-close" onclick="RAIZ_CART.closeDrawer()">×</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty" id="cart-empty">
+        <div class="cart-empty__icon">☕</div>
+        <p>Seu carrinho está vazio.<br>Que tal um cafezinho?</p>
+      </div>
+    </div>
+    <div class="cart-drawer__footer">
+      <div class="cart-total">
+        <span class="cart-total__label">Total</span>
+        <span class="cart-total__valor" id="cart-total">R$ 0,00</span>
+      </div>
+      <button class="btn btn--primary" id="cart-checkout" style="width:100%" onclick="RAIZ_CART.checkout()" disabled>Finalizar pedido →</button>
+      <p class="cart-note">🔒 Pagamento seguro · Entrega para todo Brasil</p>
+    </div>
+  </div>
+  <script src="cart.js"></script>
+</body>
+</html>

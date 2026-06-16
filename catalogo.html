@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo — Raiz Café</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .catalogo-hero {
+      background: var(--marrom-esc); padding: 48px 0; text-align: center;
+    }
+    .catalogo-hero h1 {
+      font-family: 'Cormorant Garamond', serif; font-size: 48px;
+      font-weight: 600; color: var(--rosa); margin-bottom: 8px;
+    }
+    .catalogo-hero p { color: rgba(245,230,224,0.65); font-size: 15px; }
+    .filtros {
+      display: flex; gap: 10px; margin-bottom: 36px; flex-wrap: wrap;
+    }
+    .filtro-btn {
+      padding: 8px 20px; border-radius: 50px; border: 1.5px solid var(--rosa-borda);
+      background: var(--off-white); color: var(--marrom); font-size: 13px;
+      font-family: 'Lato', sans-serif; cursor: pointer; transition: all 0.2s;
+    }
+    .filtro-btn.active, .filtro-btn:hover {
+      background: var(--marrom); color: var(--rosa); border-color: var(--marrom);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <div class="header__logo-mark">R</div>
+        <div>
+          <span class="header__logo-text">Raiz Café</span>
+          <span class="header__logo-sub">Um blend de afeto</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="catalogo.html" class="nav__link active">Catálogo</a></li>
+          <li><a href="suporte.html" class="nav__link">Suporte</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button class="cart-btn" onclick="RAIZ_CART.openDrawer()" title="Carrinho">
+          🛒 <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="catalogo-hero">
+    <div class="container">
+      <span class="section__eyebrow">Produtos artesanais</span>
+      <h1>Catálogo Raiz</h1>
+      <p>Cafés especiais e utensílios selecionados com carinho</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="filtros">
+        <button class="filtro-btn active">Todos</button>
+        <button class="filtro-btn">Cafés em grão</button>
+        <button class="filtro-btn">Cafés moídos</button>
+        <button class="filtro-btn">Utensílios</button>
+        <button class="filtro-btn">Kits</button>
+      </div>
+
+      <div class="produtos__grid">
+
+        <!-- CAFÉ 1 -->
+        <div class="produto-card">
+          <div class="produto-card__img-wrap">
+            <img src="assets/cafe-reserva-familia.svg" alt="Reserva da Família" class="produto-card__img">
+            <span class="produto-card__badge badge--gourmet">Gourmet</span>
+          </div>
+          <div class="produto-card__body">
+            <div class="produto-card__categoria">Café em grãos · 250g</div>
+            <h3 class="produto-card__nome">Reserva da Família</h3>
+            <p class="produto-card__desc">Torra média. Notas de chocolate amargo, caramelo e amêndoa torrada. Acidez suave, corpo cheio. Cultivado em Diamantina/MG.</p>
+            <div class="produto-card__footer">
+              <div class="produto-card__preco"><span>R$</span>32,90</div>
+              <button class="btn btn--primary btn--sm" onclick="RAIZ_CART.add({id:'cafe-reserva',nome:'Reserva da Família',preco:32.90,emoji:'☕'})">+ Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CAFÉ 2 -->
+        <div class="produto-card">
+          <div class="produto-card__img-wrap">
+            <img src="assets/cafe-vale-douro.svg" alt="Vale D'ouro" class="produto-card__img">
+            <span class="produto-card__badge badge--especial">Especial</span>
+          </div>
+          <div class="produto-card__body">
+            <div class="produto-card__categoria">Café moído · 250g</div>
+            <h3 class="produto-card__nome">Vale D'ouro Especial</h3>
+            <p class="produto-card__desc">Processo natural, colheita seletiva manual. Notas frutadas de cereja e jasmim, acidez vibrante e corpo sedoso. Premiado em 2023.</p>
+            <div class="produto-card__footer">
+              <div class="produto-card__preco"><span>R$</span>38,90</div>
+              <button class="btn btn--primary btn--sm" onclick="RAIZ_CART.add({id:'vale-douro',nome:'Vale D\'ouro Especial',preco:38.90,emoji:'🌿'})">+ Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CAFÉ 3 -->
+        <div class="produto-card">
+          <div class="produto-card__img-wrap">
+            <img src="assets/cafe-montanha-dourada.svg" alt="Montanha Dourada" class="produto-card__img">
+            <span class="produto-card__badge badge--gourmet">Gourmet</span>
+          </div>
+          <div class="produto-card__body">
+            <div class="produto-card__categoria">Café em grãos · 250g</div>
+            <h3 class="produto-card__nome">Montanha Dourada</h3>
+            <p class="produto-card__desc">Altitude 1.200m, torra clara. Sabor delicado com notas de mel, pêssego e flores brancas. Ideal para coador e prensa francesa.</p>
+            <div class="produto-card__footer">
+              <div class="produto-card__preco"><span>R$</span>36,90</div>
+              <button class="btn btn--primary btn--sm" onclick="RAIZ_CART.add({id:'montanha-dourada',nome:'Montanha Dourada',preco:36.90,emoji:'🏔️'})">+ Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CAFÉ 4 -->
+        <div class="produto-card">
+          <div class="produto-card__img-wrap">
+            <img src="assets/cafe-colheita-natural.svg" alt="Colheita Natural" class="produto-card__img">
+            <span class="produto-card__badge badge--organico">Orgânico</span>
+          </div>
+          <div class="produto-card__body">
+            <div class="produto-card__categoria">Café moído · 250g</div>
+            <h3 class="produto-card__nome">Colheita Natural</h3>
+            <p class="produto-card__desc">100% orgânico, sem agrotóxicos. Cultivado no sistema agroflorestal. Sabor suave, adocicado, com finalzinho de baunilha.</p>
+            <div class="produto-card__footer">
+              <div class="produto-card__preco"><span>R$</span>42,90</div>
+              <button class="btn btn--primary btn--sm" onclick="RAIZ_CART.add({id:'colheita-natural',nome:'Colheita Natural',preco:42.90,emoji:'🌸'})">+ Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- UTENSÍLIO 1 -->
+        <div class="produto-card">
+          <div class="produto-card__img-wrap">
+            <img src="assets/bule-ceramica.svg" alt="Bule de Cerâmica" class="produto-card__img">
+            <span class="produto-card__badge badge--novo">Novo</span>
+          </div>
+          <div class="produto-card__body">
+            <div class="produto-card__categoria">Utensílios · Cerâmica</div>
+            <h3 class="produto-card__nome">Bule de Cerâmica Raiz</h3>
+            <p class="produto-card__desc">Bule artesanal em cerâmica nacional, 600ml. Acabamento esmaltado em rosa antigo. Feito à mão por artesãs de Minas Gerais.</p>
+            <div class="produto-card__footer">
+              <div class="produto-card__preco"><span>R$</span>89,90</div>
+              <button class="btn btn--primary btn--sm" onclick="RAIZ_CART.add({id:'bule-ceramica',nome:'Bule de Cerâmica Raiz',preco:89.90,emoji:'🫖'})">+ Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- UTENSÍLIO 2 -->
+        <div class="produto-card">
+          <div class="produto-card__img-wrap">
+            <img src="assets/coador-pano.svg" alt="Coador de Pano" class="produto-card__img">
+            <span class="produto-card__badge badge--novo">Novo</span>
+          </div>
+          <div class="produto-card__body">
+            <div class="produto-card__categoria">Utensílios · Coador</div>
+            <h3 class="produto-card__nome">Coador de Pano Artesanal</h3>
+            <p class="produto-card__desc">Coador de pano 100% algodão orgânico, reutilizável. Suporte em bambu. Preparo lento que ressalta os sabores do café especial.</p>
+            <div class="produto-card__footer">
+              <div class="produto-card__preco"><span>R$</span>48,90</div>
+              <button class="btn btn--primary btn--sm" onclick="RAIZ_CART.add({id:'coador-pano',nome:'Coador de Pano Artesanal',preco:48.90,emoji:'🔻'})">+ Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- UTENSÍLIO 3 -->
+        <div class="produto-card">
+          <div class="produto-card__img-wrap">
+            <img src="assets/filtros-papel.svg" alt="Filtros de Papel" class="produto-card__img">
+            <span class="produto-card__badge badge--novo">Novo</span>
+          </div>
+          <div class="produto-card__body">
+            <div class="produto-card__categoria">Utensílios · Filtros</div>
+            <h3 class="produto-card__nome">Filtros de Papel Especial</h3>
+            <p class="produto-card__desc">Pack com 100 filtros sem cloro, branqueados naturalmente. Compatíveis com coadores V60, Melitta e Chemex. Sabor puro na xícara.</p>
+            <div class="produto-card__footer">
+              <div class="produto-card__preco"><span>R$</span>24,90</div>
+              <button class="btn btn--primary btn--sm" onclick="RAIZ_CART.add({id:'filtros-papel',nome:'Filtros de Papel Especial',preco:24.90,emoji:'⭕'})">+ Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- KIT -->
+        <div class="produto-card">
+          <div class="produto-card__img-wrap">
+            <img src="assets/kit-presente.svg" alt="Kit Café da Tarde" class="produto-card__img">
+            <span class="produto-card__badge badge--especial">Kit presente</span>
+          </div>
+          <div class="produto-card__body">
+            <div class="produto-card__categoria">Kit · Presente especial</div>
+            <h3 class="produto-card__nome">Kit Café da Tarde</h3>
+            <p class="produto-card__desc">Reserva da Família 250g + Bule de Cerâmica + Coador de Pano + cartão escrito à mão. Embalagem presente inclusa.</p>
+            <div class="produto-card__footer">
+              <div class="produto-card__preco"><span>R$</span>149,90</div>
+              <button class="btn btn--caramelo btn--sm" onclick="RAIZ_CART.add({id:'kit-tarde',nome:'Kit Café da Tarde',preco:149.90,emoji:'🎁'})">+ Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <div>
+          <div class="footer__brand-name">Raiz Café</div>
+          <span class="footer__brand-tag">Um blend de afeto</span>
+          <p class="footer__brand-desc">Café artesanal de Olavo e Maria, família mineira apaixonada pelo café.</p>
+        </div>
+        <div>
+          <span class="footer__col-title">Navegação</span>
+          <div class="footer__col-links">
+            <a href="index.html">Home</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="suporte.html">Suporte</a>
+          </div>
+        </div>
+        <div>
+          <span class="footer__col-title">Produtos</span>
+          <div class="footer__col-links">
+            <a href="#">Cafés em grão</a>
+            <a href="#">Cafés moídos</a>
+            <a href="#">Utensílios</a>
+            <a href="#">Kits presente</a>
+          </div>
+        </div>
+        <div>
+          <span class="footer__col-title">Contato</span>
+          <div class="footer__col-links">
+            <a href="suporte.html">Fale conosco</a>
+            <a href="suporte.html">FAQ</a>
+            <a href="mailto:oi@raizcafe.com.br">oi@raizcafe.com.br</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">© 2024 Raiz Café · Todos os direitos reservados</div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer__header">
+      <span class="cart-drawer__title">Seu carrinho 🛒</span>
+      <button class="cart-close" onclick="RAIZ_CART.closeDrawer()">×</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty" id="cart-empty">
+        <div class="cart-empty__icon">☕</div>
+        <p>Seu carrinho está vazio.<br>Que tal um cafezinho?</p>
+      </div>
+    </div>
+    <div class="cart-drawer__footer">
+      <div class="cart-total">
+        <span class="cart-total__label">Total</span>
+        <span class="cart-total__valor" id="cart-total">R$ 0,00</span>
+      </div>
+      <button class="btn btn--primary" id="cart-checkout" style="width:100%" onclick="RAIZ_CART.checkout()" disabled>
+        Finalizar pedido →
+      </button>
+      <p class="cart-note">🔒 Pagamento seguro · Entrega para todo Brasil</p>
+    </div>
+  </div>
+
+  <script src="cart.js"></script>
+</body>
+</html>
