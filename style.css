@@ -198,6 +198,16 @@ ul { list-style: none; }
   display: block; font-family: 'Cormorant Garamond', serif;
   font-size: 22px; font-weight: 700;
 }
+.hero__badge {
+  z-index: 2;
+}
+
+.hero__coffee-img {
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 1;
+  position: relative;
+}
 
 /* ============================================
    DIFERENCIAIS
