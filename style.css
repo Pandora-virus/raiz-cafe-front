@@ -335,6 +335,14 @@ ul { list-style: none; }
   z-index: 300; opacity: 0; pointer-events: none;
   transition: opacity 0.3s;
 }
+.cart-btn {
+  color: var(--rosa);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  position: relative;
+}
 .cart-overlay.open { opacity: 1; pointer-events: all; }
 .cart-drawer {
   position: fixed; top: 0; right: 0; bottom: 0;
