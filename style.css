@@ -356,6 +356,7 @@ ul { list-style: none; }
 .badge--especial { background: var(--caramelo); color: #fff; }
 .badge--novo { background: var(--marrom-esc); color: var(--rosa); }
 .badge--organico { background: #4a7c59; color: #fff; }
+.badge--kit { background: var(--verde); color: #fff; }
 .produto-card__body { padding: 22px; }
 .produto-card__categoria {
   font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
