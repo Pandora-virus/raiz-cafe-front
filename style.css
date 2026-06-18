@@ -501,8 +501,20 @@ ul { list-style: none; }
    PÁGINA SUPORTE
 ============================================ */
 .suporte-hero {
-  background: var(--marrom-esc); padding: 60px 0;
+  background: var(--marrom-esc) url('assets/graos-cafe.svg') center / cover no-repeat;
+  padding: 60px 0;
   text-align: center;
+  position: relative;
+}
+.suporte-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(61,14,14,0.75);
+}
+.suporte-hero .container {
+  position: relative;
+  z-index: 1;
 }
 .suporte-hero .section__title { color: var(--rosa); }
 .suporte-hero p { color: rgba(245,230,224,0.7); font-size: 15px; }

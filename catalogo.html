@@ -7,9 +7,22 @@
   <link rel="stylesheet" href="style.css">
   <style>
     .catalogo-hero {
-      background: var(--marrom-esc); padding: 48px 0; text-align: center;
+      background: var(--marrom-esc) url('assets/graos-cafe.svg') center / cover no-repeat;
+      padding: 60px 0;
+      text-align: center;
+      position: relative;
     }
-    .catalogo-hero h1 {
+    .catalogo-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(61,14,14,0.65);
+    }
+    .catalogo-hero .container {
+       position: relative;
+       z-index: 1;
+    }
+     .catalogo-hero h1 {
       font-family: 'Cormorant Garamond', serif; font-size: 48px;
       font-weight: 600; color: var(--rosa); margin-bottom: 8px;
     }
